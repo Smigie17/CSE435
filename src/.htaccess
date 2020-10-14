@@ -1,0 +1,24 @@
+AuthType Basic
+AuthBasicProvider ldap
+AuthName "Roaming Access"
+AuthLDAPURL ldap://ds.cse.msu.edu:389/ou=People,dc=cse,dc=msu,dc=edu?uid?sub
+AuthLDAPGroupAttribute memberUid
+AuthLDAPGroupAttributeIsDN off
+
+SetEnvIf Request_URI .* noauth
+SetEnvIf Request_URI ./Agenda-Page !noauth
+SetEnvIf Request_URI ./Forum-Page !noauth
+
+<RequireAny>
+  Require env noauth
+  Require valid-user
+</RequireAny>
+
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+RewriteRule ^(.*) ./index.html [NC,L]

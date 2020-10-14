@@ -1,0 +1,63 @@
+div.rcorners1 {
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30pt;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 98%;
+    height: 150px;
+    background-color: rgb(231, 231, 231);
+}
+
+.slidedown {
+    background-color: grey;
+    height: 160px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -135px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: absolute;
+    transition: all 1s ease-in-out;
+}
+
+.slidedown:hover {
+    transform: translate(0px, 120px);
+    transition: all 1s ease-in-out;
+}
+
+div.header {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(2, 44, 2);
+    overflow: hidden;
+}
+
+.column {
+    float: left;
+    width: 20%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p.teamName {
+    text-align: center;
+    position: relative;
+}
+
+img.teamImage {
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

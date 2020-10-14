@@ -1,0 +1,75 @@
+<html style="height: 100%; overflow: hidden;">
+
+<head>
+    <title>PCAS2 Project Page</title>
+    <link rel=”stylesheet” href=”style.css”>
+</head>
+
+<div class="header">
+    <p style="color: white;font-size: 28pt; font-weight: 600; margin-left: 20pt;margin-top: 10pt;">
+        PCAS2 Project Page
+    </p>
+    <div style="text-align: center;   width: 100%; ">
+        <button (click)="Selected('Welcome-Page')" id="Welcome-Page" class="page">
+        <b style ="color: white;">Welcome</b>
+      </button>
+        <button (click)="Selected('Team-Page')" id="Team-Page" class="page">
+        <b style ="color: white;">Team</b>
+      </button>
+        <button (click)="Selected('Project-Page')" id="Project-Page" class="page">
+        <b style ="color: white;">Project</b>
+      </button>
+        <button (click)="RestrictedSelected('Agenda-Page')" id="Agenda-Page" class="page">
+        <b style ="color: white;">Agenda</b>
+      </button>
+        <button (click)="RestrictedSelected('Forum-Page')" id="Forum-Page" class="page right">
+        <b style ="color: white;">Forum</b>
+      </button>
+    </div>
+</div>
+<div style="height: 100%; background-color: rgb(5, 22, 0); width: 80%; margin:auto;  ">
+    <div style="position: relative;overflow-y: hidden; height: 100%;">
+        <div class="slidedown">
+            <div class="row">
+                <div class="column">
+                    <a class="team-link" href="https://www.linkedin.com/in/nolanbaldwin/">
+                        <img src="assets/images/baldw232.PNG" class="teamImage">
+                        <p class="teamName">Nolan Baldwin<br /><strong>Project Manager</strong></p>
+                    </a>
+                </div>
+                <div class="column ">
+                    <a class="team-link" href="https://www.linkedin.com/in/abhinavthirupathi">
+                        <img src="assets/images/Abhi Thirupathi.png" class="teamImage">
+                        <p class="teamName">Abhi Thirupathi<br /><strong>Project Facilitator</strong></p>
+                    </a>
+                </div>
+                <div class="column ">
+                    <a class="team-link" href="https://www.linkedin.com/in/andrew-smigielski/">
+                        <img src="assets/images/Andrew Smigielski.JPG" class="teamImage">
+                        <p class="teamName">Andrew Smigielski<br /> <strong> Artifacts Manager</strong> </p>
+
+                    </a>
+                </div>
+                <div class="column ">
+                    <a class="team-link" href="https://www.linkedin.com/in/parker-kirby-bb93aa1b8/">
+                        <img src="assets/images/Parker Kirby.jpg" class="teamImage">
+                        <p class="teamName">Parker Kirby<br /><strong>Security Manager</strong> </p>
+                    </a>
+                </div>
+                <div class="column ">
+                    <a class="team-link" href="https://www.linkedin.com/in/tanner-debien/">
+                        <img src="assets/images/Tanner Debien.jpg" class="teamImage">
+                        <p class="teamName">Tanner Debien<br /><strong>Domain Expert</strong></p>
+                    </a>
+                </div>
+
+            </div>
+            <p style="position: absolute;text-align: center;bottom: 0;margin-bottom: 0pt; font-weight: 700; width: 100%;">∨ Team Members ∨</p>
+
+        </div>
+
+        <router-outlet></router-outlet>
+
+
+    </div>
+</div>

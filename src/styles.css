@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+div.page-section {
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30pt;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 98%;
+    height: auto;
+    background-color: rgb(231, 231, 231);
+}
